@@ -156,8 +156,8 @@ figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height
 .prose blockquote { margin: 42px 0; padding: 8px 0 8px 28px; border-left: 3px solid var(--accent); }
 .prose blockquote p { margin: 0; color: var(--ink); font: 500 27px/1.45 "Newsreader", serif; }
 .prose figure {
-  width: min(940px, calc(100vw - 56px));
-  margin: 58px 0 58px -138px;
+  width: 100%;
+  margin: 58px 0;
 }
 .prose figure img, .prose figure video { background: var(--soft); border-radius: 4px; box-shadow: 0 12px 34px var(--shadow); }
 .prose .media-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
@@ -189,7 +189,6 @@ figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height
   .hero-media { margin-bottom: 60px; }
   .post-grid { display: block; }
   .post-aside { display: none; }
-  .prose figure { width: 100%; margin-left: 0; }
 }
 
 @media (max-width: 520px) {

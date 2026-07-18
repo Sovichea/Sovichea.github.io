@@ -1,6 +1,6 @@
 (function () {
   var root = document.documentElement;
-  var toggle = document.querySelector(".theme-toggle");
+  var toggles = document.querySelectorAll(".theme-toggle");
   var systemDark = window.matchMedia("(prefers-color-scheme: dark)");
 
   function currentTheme() {
@@ -8,22 +8,23 @@
     return systemDark.matches ? "dark" : "light";
   }
 
-  function updateLabel() {
-    if (!toggle) return;
+  function updateLabels() {
     var next = currentTheme() === "dark" ? "light" : "dark";
-    toggle.setAttribute("aria-label", "Switch to " + next + " mode");
-    toggle.setAttribute("title", "Switch to " + next + " mode");
+    for (var i = 0; i < toggles.length; i++) {
+      toggles[i].setAttribute("aria-label", "Switch to " + next + " mode");
+      toggles[i].setAttribute("title", "Switch to " + next + " mode");
+    }
   }
 
-  if (toggle) {
-    toggle.addEventListener("click", function () {
+  for (var i = 0; i < toggles.length; i++) {
+    toggles[i].addEventListener("click", function () {
       var next = currentTheme() === "dark" ? "light" : "dark";
       root.dataset.theme = next;
       localStorage.setItem("sovichea-theme", next);
-      updateLabel();
+      updateLabels();
     });
   }
 
-  systemDark.addEventListener("change", updateLabel);
-  updateLabel();
+  systemDark.addEventListener("change", updateLabels);
+  updateLabels();
 }());
