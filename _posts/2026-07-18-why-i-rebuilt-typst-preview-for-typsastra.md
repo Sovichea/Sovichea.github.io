@@ -2,7 +2,7 @@
 layout: post
 title: "Why I Rebuilt Typst Preview for Typsastra"
 description: "A journey from complex-script editing to previewing 1,500-page documents on modest hardware."
-date: 2026-07-18 21:30:00 +0700
+date: 2026-07-18 00:00:00 +0700
 author: Sovichea
 category: Engineering
 read_time: 14 min read

@@ -1,11 +1,12 @@
 :root {
-  --ink: #17211c;
-  --muted: #66716b;
+  --ink: #10271f;
+  --muted: #607169;
   --paper: #f5f1e8;
   --soft: #e9e3d7;
   --line: #cbc6ba;
-  --accent: #cc4a2e;
-  --green: #214f3b;
+  --accent: #006647;
+  --green: #004d35;
+  --lime: #91bd28;
   --white: #fffdf8;
 }
 
@@ -104,7 +105,7 @@ figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height
 .benchmark h3 { margin: 0 0 28px; font: 500 30px/1.15 "Newsreader", serif; }
 .bar-row { display: grid; grid-template-columns: 150px 1fr 90px; align-items: center; gap: 14px; margin: 18px 0; font-size: 13px; }
 .bar-track { height: 18px; background: rgba(255,255,255,.13); }
-.bar { height: 100%; background: #f2b24b; }
+.bar { height: 100%; background: #91bd28; }
 .bar.typsastra { width: 15.5%; background: #8fc9a6; }
 .bar.vscode { width: 100%; }
 .benchmark small { color: #bdd0c5; }
