@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4efe6">
+    <link rel="icon" href="{{ '/assets/images/typsastra-favicon.png' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% seo %}
+    {% feed_meta %}
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-mark" href="{{ '/' | relative_url }}" aria-label="Sovichea home">S<span>/</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="{{ '/' | relative_url }}">Writing</a>
+        <a href="https://github.com/Sovichea/typsastra">Typsastra ↗</a>
+      </nav>
+    </header>
+    <main>{{ content }}</main>
+    <footer class="site-footer">
+      <p>Made in Phnom Penh · Built with Jekyll</p>
+      <a href="https://github.com/Sovichea">GitHub ↗</a>
+    </footer>
+  </body>
+</html>
+

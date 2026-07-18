@@ -1,0 +1,31 @@
+---
+layout: default
+title: Writing
+description: Notes from Sovichea on software, language, and document tools.
+---
+<section class="home-hero">
+  <p class="eyebrow">Independent software &amp; writing</p>
+  <h1>Tools should fit the way people <em>actually</em> write.</h1>
+  <p class="intro">Notes on complex scripts, calm software, and building for documents much larger than the demo.</p>
+</section>
+
+<section class="articles" aria-labelledby="latest-writing">
+  <div class="section-heading">
+    <h2 id="latest-writing">Latest writing</h2>
+    <span>{{ site.posts | size | prepend: "0" }} article</span>
+  </div>
+  {% for post in site.posts %}
+  <article class="article-card">
+    <a class="card-image" href="{{ post.url | relative_url }}">
+      <img src="{{ post.hero | relative_url }}" alt="">
+    </a>
+    <div class="card-copy">
+      <p>{{ post.category }} · {{ post.date | date: "%Y" }}</p>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.description }}</p>
+      <a class="read-link" href="{{ post.url | relative_url }}">Read the story <span>→</span></a>
+    </div>
+  </article>
+  {% endfor %}
+</section>
+

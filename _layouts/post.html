@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-hero">
+    <div class="post-kicker">{{ page.category | default: "Field notes" }}</div>
+    <h1>{{ page.title }}</h1>
+    <p class="post-deck">{{ page.description }}</p>
+    <div class="post-meta">
+      <span>{{ page.author | default: site.title }}</span>
+      <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+      <span>{{ page.read_time | default: "12 min read" }}</span>
+    </div>
+  </header>
+  {% if page.hero %}
+  <figure class="hero-media">
+    <img src="{{ page.hero | relative_url }}" alt="{{ page.hero_alt }}">
+    {% if page.hero_caption %}<figcaption>{{ page.hero_caption }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+  <div class="post-grid">
+    <aside class="post-aside" aria-label="Article details">
+      <span>Article 001</span>
+      <div></div>
+      <a href="#top">Back to top ↑</a>
+    </aside>
+    <div class="prose" id="top">{{ content }}</div>
+  </div>
+</article>
+

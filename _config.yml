@@ -1,0 +1,16 @@
+title: Sovichea
+description: Notes on building thoughtful tools for writing, languages, and long documents.
+url: "https://sovichea.github.io"
+baseurl: ""
+lang: en
+timezone: Asia/Phnom_Penh
+permalink: /writing/:title/
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
